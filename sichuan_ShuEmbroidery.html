@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>蜀绣工艺</title>
+  <!-- 引入 Font Awesome 6 CSS 文件 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+	<!--链接css文件-->
+	<link rel="stylesheet" href="css/sichuan/header.css" type="text/css">
+	<link rel="stylesheet" href="css/sichuan/SE.css" type="text/css">
+	<!--链接js文件-->
+    <script type="text/javascript" src="js/sichuan/SE.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Tailwind 配置 -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                primary: '#8C1515', // 深红色 - 蜀绣传统色彩
+                secondary: '#F5F0E1', // 米白色 - 蜀绣常用背景色
+                accent: '#D4AF37', // 金色 - 蜀绣装饰元素
+                dark: '#2C3E50', // 深色 - 文本和边框
+              },
+              fontFamily: {
+                sans: ['Inter', 'system-ui', 'sans-serif'],
+                serif: ['Noto Serif SC', 'serif'],
+              },
+            },
+          }
+        }
+      </script>
+
+</head>
+
+<body class="font-sans bg-secondary text-dark antialiased">
+  <!-- 导航栏 -->
+  <header class="navbar">
+    <div class="navbar-container">
+      <div class="navbar-logo">
+        <span>蜀绣工艺</span>
+      </div>
+
+      <nav class="navbar-menu">
+        <div class="navbar-links">
+          <a href="list_sichuan_index.html" class="navbar-link">回到首页</a>
+          <a href="#overview" class="navbar-link">关于蜀绣</a>
+          
+          <!-- 下拉菜单 -->
+          <div class="dropdown">
+            <a class="navbar-link">刺绣技法</a>
+            <div class="dropdown-content">
+              <a href="#skills">晕针</a>
+              <a href="#skills">铺针</a>
+              <a href="#skills">滚针</a>
+            </div>
+          </div>
+          
+          <a href="#history" class="navbar-link">历史发展</a>
+          <a href="#masters" class="navbar-link">名家大师</a>
+          <a href="#gallery" class="navbar-link">作品鉴赏</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 主内容区 -->  
+    <!-- 封皮 -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <img src="images/sichuan/SE/cover.jpg" alt="精美的蜀绣作品" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-dark/10"></div>
+      </div>
+      
+      <div class="container mx-auto px-4 z-10 text-center">
+        <h1 class="text-[clamp(2.5rem,8vw,5rem)] font-serif font-bold text-white text-shadow-lg mb-6 animate-fade-in">
+          蜀绣
+          <span class="block text-[clamp(1.5rem,4vw,2.5rem)] mt-2 text-accent">千年蜀地 一针一线绣华章</span>
+        </h1>
+        <p class="text-[clamp(1rem,3vw,1.25rem)] text-white text-shadow max-w-3xl mx-auto mb-10">
+          中国四大名绣之一，以其精湛的技艺和独特的艺术风格闻名于世
+        </p>
+        <a href="#about" class="inline-block bg-accent hover:bg-accent/90 text-dark font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
+          探索蜀绣 <i class="fa fa-arrow-down ml-2"></i>
+        </a>
+      </div>
+      
+      <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <a href="#about" class="text-white text-3xl">
+          <i class="fa fa-angle-down"></i>
+        </a>
+      </div>
+    </section>
+  
+    <!-- 关于蜀绣 -->
+    <section id="overview" class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-[clamp(1.75rem,5vw,3rem)] font-serif font-bold text-primary mb-4">关于蜀绣</h2>
+          <div class="w-24 h-1 bg-accent mx-auto mb-6"></div>
+          <p class="text-lg max-w-3xl mx-auto">蜀绣是中国四川省传统的刺绣工艺，与苏绣、湘绣、粤绣并称为中国四大名绣</p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="order-2 md:order-1">
+            <h3 class="text-2xl font-serif font-bold text-dark mb-4">蜀绣的艺术特色</h3>
+            <p class="mb-4">蜀绣以软缎和彩丝为主要原料，针法包括12大类共122种，如晕针、铺针、滚针、截针、掺针、沙针、盖针等。讲究"针脚整齐，线片光亮，紧密柔和，车拧到家"。</p>
+            <p class="mb-4">蜀绣题材多为花鸟、走兽、山水、虫鱼、人物，品种除纯欣赏品绣屏以外，还有被面、枕套、衣、鞋、靠垫、桌布、头巾、手帕、画屏等。既有巨幅条屏，又有袖珍小件，是观赏性与实用性兼备的精美艺术品。</p>
+            <div class="grid grid-cols-2 gap-4 mt-8">
+              <div class="bg-secondary p-4 rounded-lg shadow-md">
+                <i class="fa fa-paint-brush text-primary text-2xl mb-2"></i>
+                <h4 class="font-bold mb-1">针法丰富</h4>
+                <p class="text-sm">122种针法，变化多样</p>
+              </div>
+              <div class="bg-secondary p-4 rounded-lg shadow-md">
+                <i class="fa fa-palette text-primary text-2xl mb-2"></i>
+                <h4 class="font-bold mb-1">色彩艳丽</h4>
+                <p class="text-sm">用色明快，对比强烈</p>
+              </div>
+              <div class="bg-secondary p-4 rounded-lg shadow-md">
+                <i class="fa fa-th text-primary text-2xl mb-2"></i>
+                <h4 class="font-bold mb-1">构图精巧</h4>
+                <p class="text-sm">虚实结合，层次分明</p>
+              </div>
+              <div class="bg-secondary p-4 rounded-lg shadow-md">
+                <i class="fa fa-certificate text-primary text-2xl mb-2"></i>
+                <h4 class="font-bold mb-1">技艺精湛</h4>
+                <p class="text-sm">针脚细密，平齐光亮</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="order-1 md:order-2 relative">
+            <img src="images/sichuan/SE/overview.jpg" alt="蜀绣工艺展示" class="w-full h-auto rounded-lg shadow-xl">
+            <div class="absolute -bottom-6 -left-6 bg-accent text-dark p-4 rounded-lg shadow-lg hidden md:block">
+              <p class="font-bold">传承千年的东方艺术瑰宝</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <!-- 刺绣技法 -->
+    <section id="skills" class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-[clamp(1.75rem,5vw,3rem)] font-serif font-bold text-primary mb-4">刺绣技法</h2>
+          <div class="w-24 h-1 bg-accent mx-auto mb-6"></div>
+          <p class="text-lg max-w-3xl mx-auto">蜀绣针法丰富，技艺精湛，是蜀绣艺术的核心所在</p>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- 晕针 -->
+          <div class="bg-secondary rounded-lg overflow-hidden shadow-lg transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl group">
+            <div class="h-64 overflow-hidden">
+              <img src="images/sichuan/SE/skill1.jpg" alt="晕针技法展示" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110">
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-serif font-bold text-dark mb-3">晕针</h3>
+              <p class="mb-4">晕针是蜀绣最具特色的针法之一，它是用各种不同的针脚，在刺绣图案的轮廓内，分层逐步地进行刺绣，使图案的色彩由深到浅或由浅到深，形成一种自然过渡的效果，如同绘画中的晕染一样。</p>
+              <div class="flex items-center justify-between">
+                <span class="text-sm text-primary font-bold">传统技法</span>
+                <i class="fa fa-thread text-primary"></i>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 铺针 -->
+          <div class="bg-secondary rounded-lg overflow-hidden shadow-lg transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl group">
+            <div class="h-64 overflow-hidden">
+              <img src="images/sichuan/SE/skill2.jpg" alt="铺针技法展示" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110">
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-serif font-bold text-dark mb-3">铺针</h3>
+              <p class="mb-4">铺针是一种用直针平绣的针法，针脚长短一致，排列均匀，紧密相连，多用于绣制大面积的色块和图案。铺针的特点是针脚整齐，线片光亮，能够充分体现蜀绣"平齐光亮"的艺术特色。</p>
+              <div class="flex items-center justify-between">
+                <span class="text-sm text-primary font-bold">基础技法</span>
+                <i class="fa fa-thread text-primary"></i>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 滚针 -->
+          <div class="bg-secondary rounded-lg overflow-hidden shadow-lg transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl group">
+            <div class="h-64 overflow-hidden">
+              <img src="images/sichuan/SE/skill3.jpg" alt="滚针技法展示" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110">
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-serif font-bold text-dark mb-3">滚针</h3>
+              <p class="mb-4">滚针是一种针脚较短，针与针之间相互连接，呈鱼鳞状排列的针法。滚针的特点是针脚灵活，能够适应各种曲线和转折，多用于绣制动物的毛发、花卉的叶脉等细节部分。</p>
+              <div class="flex items-center justify-between">
+                <span class="text-sm text-primary font-bold">精细技法</span>
+                <i class="fa fa-thread text-primary"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mt-16 text-center">
+          <a href="#" class="inline-block bg-primary hover:bg-primary/90 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
+            了解更多技法 <i class="fa fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+  
+    <!-- 历史发展 -->
+    <section id="history" class="py-20 bg-gradient-to-b from-secondary to-white">
+        <div class="container mx-auto px-4">
+          <div class="text-center mb-16">
+            <h2 class="text-[clamp(1.75rem,5vw,3rem)] font-serif font-bold text-primary mb-4">历史发展</h2>
+            <div class="w-24 h-1 bg-accent mx-auto mb-6"></div>
+            <p class="text-lg max-w-3xl mx-auto">蜀绣有着悠久的历史，其起源可以追溯到汉代</p>
+          </div>
+          
+          <div class="relative">
+            <!-- 时间线 -->
+            <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-primary/30"></div>
+            
+            <!-- 历史事件 -->
+            <div class="space-y-16">
+              <!-- 汉代 -->
+              <div class="relative">
+                <div class="md:w-1/2 md:pr-12 md:text-right">
+                  <div class="bg-white p-6 rounded-lg shadow-lg transform transition-all duration-300 hover:shadow-xl">
+                    <span class="inline-block bg-primary text-white px-4 py-1 rounded-full text-sm font-bold mb-4">汉代 (前202年-220年)</span>
+                    <h3 class="text-xl font-serif font-bold mb-3">蜀绣起源</h3>
+                    <p>蜀绣的历史可以追溯到汉代，当时的蜀地已经有了高度发达的织锦业。据《后汉书》记载，当时蜀地"女工之业，覆衣天下"，可见蜀绣在当时已经达到了相当高的水平。</p>
+                  </div>
+                </div>
+                <div class="absolute left-1/2 transform -translate-x-1/2 top-1/2 w-6 h-6 rounded-full bg-primary shadow-lg hidden md:block"></div>
+              </div>
+              
+              <!-- 唐代 -->
+              <div class="relative">
+                <div class="md:w-1/2 md:ml-auto md:pl-12">
+                  <div class="bg-white p-6 rounded-lg shadow-lg transform transition-all duration-300 hover:shadow-xl">
+                    <span class="inline-block bg-primary text-white px-4 py-1 rounded-full text-sm font-bold mb-4">唐代 (618年-907年)</span>
+                    <h3 class="text-xl font-serif font-bold mb-3">蜀绣兴盛</h3>
+                    <p>唐代是蜀绣发展的鼎盛时期，蜀绣产品不仅在国内畅销，还通过"丝绸之路"远销中亚、西亚和欧洲。当时的成都被誉为"锦官城"，是全国织锦业的中心。</p>
+                  </div>
+                </div>
+                <div class="absolute left-1/2 transform -translate-x-1/2 top-1/2 w-6 h-6 rounded-full bg-primary shadow-lg hidden md:block"></div>
+              </div>
+              
+              <!-- 清代 -->
+              <div class="relative">
+                <div class="md:w-1/2 md:pr-12 md:text-right">
+                  <div class="bg-white p-6 rounded-lg shadow-lg transform transition-all duration-300 hover:shadow-xl">
+                    <span class="inline-block bg-primary text-white px-4 py-1 rounded-full text-sm font-bold mb-4">清代 (1636年-1912年)</span>
+                    <h3 class="text-xl font-serif font-bold mb-3">蜀绣成熟</h3>
+                    <p>清代是蜀绣技艺成熟的时期，针法已经发展到12大类，122种。蜀绣作品在构图、色彩、针法等方面都达到了很高的艺术水准，成为了宫廷和贵族喜爱的装饰品。</p>
+                  </div>
+                </div>
+                <div class="absolute left-1/2 transform -translate-x-1/2 top-1/2 w-6 h-6 rounded-full bg-primary shadow-lg hidden md:block"></div>
+              </div>
+              
+              <!-- 现代 -->
+              <div class="relative">
+                <div class="md:w-1/2 md:ml-auto md:pl-12">
+                  <div class="bg-white p-6 rounded-lg shadow-lg transform transition-all duration-300 hover:shadow-xl">
+                    <span class="inline-block bg-primary text-white px-4 py-1 rounded-full text-sm font-bold mb-4">现代 (1949年至今)</span>
+                    <h3 class="text-xl font-serif font-bold mb-3">蜀绣传承与创新</h3>
+                    <p>新中国成立后，蜀绣得到了政府的重视和保护，成立了专业的蜀绣研究所和刺绣厂。近年来，蜀绣艺术家们在继承传统的基础上不断创新，将蜀绣与现代艺术相结合，创作出了许多具有时代特色的优秀作品。</p>
+                  </div>
+                </div>
+                <div class="absolute left-1/2 transform -translate-x-1/2 top-1/2 w-6 h-6 rounded-full bg-primary shadow-lg hidden md:block"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+    <!-- 名家大师 -->
+    <section id="masters" class="py-20 bg-secondary">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-[clamp(1.75rem,5vw,3rem)] font-serif font-bold text-primary mb-4">名家大师</h2>
+          <div class="w-24 h-1 bg-accent mx-auto mb-6"></div>
+          <p class="text-lg max-w-3xl mx-auto">蜀绣的传承离不开一代又一代技艺精湛的大师</p>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- 大师1 -->
+          <div class="bg-white rounded-lg overflow-hidden shadow-lg group">
+            <div class="relative">
+              <img src="images/sichuan/SE/master1.webp" alt="蜀绣大师康宁" class="w-full h-80 object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                <div>
+                  <h3 class="text-xl font-serif font-bold text-white mb-2">康宁</h3>
+                  <p class="text-white/80">国家级非物质文化遗产蜀绣代表性传承人</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-serif font-bold text-dark mb-2">康宁</h3>
+              <p class="text-sm text-gray-600 mb-3">国家级非物质文化遗产蜀绣代表性传承人</p>
+              <p class="mb-4">康宁从事蜀绣工作50余年，在传统蜀绣的基础上不断创新，形成了自己独特的艺术风格。她的作品多次在国内外展出并获奖，为蜀绣的传承和发展做出了重要贡献。</p>
+              <div class="flex space-x-3">
+                <a href="#" class="text-primary hover:text-accent transition-colors duration-300">
+                  <i class="fa fa-link"></i>
+                </a>
+                <a href="#" class="text-primary hover:text-accent transition-colors duration-300">
+                  <i class="fa fa-weibo"></i>
+                </a>
+                <a href="#" class="text-primary hover:text-accent transition-colors duration-300">
+                  <i class="fa fa-wechat"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 大师2 -->
+          <div class="bg-white rounded-lg overflow-hidden shadow-lg group">
+            <div class="relative">
+              <img src="images/sichuan/SE/master2.jpg" alt="蜀绣大师郝淑萍" class="w-full h-80 object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                <div>
+                  <h3 class="text-xl font-serif font-bold text-white mb-2">郝淑萍</h3>
+                  <p class="text-white/80">中国工艺美术大师，蜀绣泰斗</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-serif font-bold text-dark mb-2">郝淑萍</h3>
+              <p class="text-sm text-gray-600 mb-3">中国工艺美术大师，蜀绣泰斗</p>
+              <p class="mb-4">郝淑萍从事蜀绣创作60余年，是蜀绣艺术的代表性人物之一。她的作品以细腻、逼真著称，尤其擅长绣制人物和动物。她曾多次赴国外进行文化交流，为蜀绣走向世界做出了重要贡献。</p>
+              <div class="flex space-x-3">
+                <a href="#" class="text-primary hover:text-accent transition-colors duration-300">
+                  <i class="fa fa-link"></i>
+                </a>
+                <a href="#" class="text-primary hover:text-accent transition-colors duration-300">
+                  <i class="fa fa-weibo"></i>
+                </a>
+                <a href="#" class="text-primary hover:text-accent transition-colors duration-300">
+                  <i class="fa fa-wechat"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 大师3 -->
+          <div class="bg-white rounded-lg overflow-hidden shadow-lg group">
+            <div class="relative">
+              <img src="images/sichuan/SE/master3.webp" alt="蜀绣大师孟德芝" class="w-full h-80 object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                <div>
+                  <h3 class="text-xl font-serif font-bold text-white mb-2">孟德芝</h3>
+                  <p class="text-white/80">四川省工艺美术大师</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-serif font-bold text-dark mb-2">孟德芝</h3>
+              <p class="text-sm text-gray-600 mb-3">四川省工艺美术大师</p>
+              <p class="mb-4">孟德芝是蜀绣新一代传承人中的佼佼者，她将传统蜀绣技艺与现代审美相结合，创作了许多具有时代特色的作品。她注重蜀绣技艺的传承和教学，培养了许多优秀的蜀绣人才。</p>
+              <div class="flex space-x-3">
+                <a href="#" class="text-primary hover:text-accent transition-colors duration-300">
+                  <i class="fa fa-link"></i>
+                </a>
+                <a href="#" class="text-primary hover:text-accent transition-colors duration-300">
+                  <i class="fa fa-weibo"></i>
+                </a>
+                <a href="#" class="text-primary hover:text-accent transition-colors duration-300">
+                  <i class="fa fa-wechat"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <!-- 作品欣赏 -->
+    <section id="gallery" class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-[clamp(1.75rem,5vw,3rem)] font-serif font-bold text-primary mb-4">作品欣赏</h2>
+          <div class="w-24 h-1 bg-accent mx-auto mb-6"></div>
+          <p class="text-lg max-w-3xl mx-auto">欣赏精美的蜀绣作品，感受传统工艺的魅力</p>
+        </div>
+        
+        <!-- 过滤器 -->
+        <div class="flex flex-wrap justify-center gap-4 mb-12">
+          <button class="filter-btn active bg-primary text-white px-6 py-2 rounded-full transition-all duration-300 hover:shadow-lg">
+            全部作品
+          </button>
+          <button class="filter-btn bg-secondary text-dark px-6 py-2 rounded-full transition-all duration-300 hover:bg-primary hover:text-white hover:shadow-lg">
+            花鸟
+          </button>
+          <button class="filter-btn bg-secondary text-dark px-6 py-2 rounded-full transition-all duration-300 hover:bg-primary hover:text-white hover:shadow-lg">
+            人物
+          </button>
+          <button class="filter-btn bg-secondary text-dark px-6 py-2 rounded-full transition-all duration-300 hover:bg-primary hover:text-white hover:shadow-lg">
+            山水
+          </button>
+          <button class="filter-btn bg-secondary text-dark px-6 py-2 rounded-full transition-all duration-300 hover:bg-primary hover:text-white hover:shadow-lg">
+            动物
+          </button>
+        </div>
+        
+        <!-- 作品网格 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- 作品1 -->
+          <div class="gallery-item relative overflow-hidden rounded-lg shadow-lg group">
+            <img src="images/sichuan/SE/ga1.jpg" alt="蜀绣花鸟作品" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110">
+            <div class="absolute inset-0 bg-dark/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+              <h3 class="text-xl font-serif font-bold text-white mb-2">芙蓉锦鲤</h3>
+              <p class="text-white/80 mb-4">以晕针技法绣制的芙蓉游鱼图，色彩艳丽，层次分明</p>
+              <div class="flex justify-between items-center">
+                <span class="text-sm bg-accent text-dark px-3 py-1 rounded-full">花鸟</span>
+                <button class="text-white hover:text-accent transition-colors duration-300">
+                  <i class="fa fa-search-plus text-xl"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 作品2 -->
+          <div class="gallery-item relative overflow-hidden rounded-lg shadow-lg group">
+            <img src="images/sichuan/SE/ga2.jpg" alt="蜀绣人物作品" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110">
+            <div class="absolute inset-0 bg-dark/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+              <h3 class="text-xl font-serif font-bold text-white mb-2">金乌神女</h3>
+              <p class="text-white/80 mb-4">以细腻的针法刻画金乌神女的雍容华贵</p>
+              <div class="flex justify-between items-center">
+                <span class="text-sm bg-accent text-dark px-3 py-1 rounded-full">人物</span>
+                <button class="text-white hover:text-accent transition-colors duration-300">
+                  <i class="fa fa-search-plus text-xl"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 作品3 -->
+          <div class="gallery-item relative overflow-hidden rounded-lg shadow-lg group">
+            <img src="images/sichuan/SE/ga3.jpg" alt="蜀绣山水作品" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110">
+            <div class="absolute inset-0 bg-dark/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+              <h3 class="text-xl font-serif font-bold text-white mb-2">青山绿水</h3>
+              <p class="text-white/80 mb-4">以山水为题材，展现四川壮丽的自然风光</p>
+              <div class="flex justify-between items-center">
+                <span class="text-sm bg-accent text-dark px-3 py-1 rounded-full">山水</span>
+                <button class="text-white hover:text-accent transition-colors duration-300">
+                  <i class="fa fa-search-plus text-xl"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 作品4 -->
+          <div class="gallery-item relative overflow-hidden rounded-lg shadow-lg group">
+            <img src="images/sichuan/SE/ga4.jpg" alt="蜀绣动物作品" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110">
+            <div class="absolute inset-0 bg-dark/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+              <h3 class="text-xl font-serif font-bold text-white mb-2">熊猫图</h3>
+              <p class="text-white/80 mb-4">以四川特有的熊猫为题材，生动展现熊猫的憨态可掬</p>
+              <div class="flex justify-between items-center">
+                <span class="text-sm bg-accent text-dark px-3 py-1 rounded-full">动物</span>
+                <button class="text-white hover:text-accent transition-colors duration-300">
+                  <i class="fa fa-search-plus text-xl"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 作品5 -->
+          <div class="gallery-item relative overflow-hidden rounded-lg shadow-lg group">
+            <img src="images/sichuan/SE/ga5.jpg" alt="蜀绣花鸟作品" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110">
+            <div class="absolute inset-0 bg-dark/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+              <h3 class="text-xl font-serif font-bold text-white mb-2">孔雀开屏</h3>
+              <p class="text-white/80 mb-4">以孔雀为题材，展现孔雀开屏时的美丽姿态</p>
+              <div class="flex justify-between items-center">
+                <span class="text-sm bg-accent text-dark px-3 py-1 rounded-full">花鸟</span>
+                <button class="text-white hover:text-accent transition-colors duration-300">
+                  <i class="fa fa-search-plus text-xl"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 作品6 -->
+          <div class="gallery-item relative overflow-hidden rounded-lg shadow-lg group">
+            <img src="images/sichuan/SE/ga6.jpg" alt="蜀绣人物作品" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110">
+            <div class="absolute inset-0 bg-dark/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+              <h3 class="text-xl font-serif font-bold text-white mb-2">贵妃醉酒</h3>
+              <p class="text-white/80 mb-4">以唐代杨贵妃为原型，展现贵妃醉酒的慵懒气质</p>
+              <div class="flex justify-between items-center">
+                <span class="text-sm bg-accent text-dark px-3 py-1 rounded-full">人物</span>
+                <button class="text-white hover:text-accent transition-colors duration-300">
+                  <i class="fa fa-search-plus text-xl"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mt-12 text-center">
+          <button class="bg-primary hover:bg-primary/90 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
+            加载更多作品 <i class="fa fa-refresh ml-2"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+<!--页脚-->	
+<footer class="bg-gray-900 text-white">
+  <div class="container mx-auto px-4 py-12">
+    <!-- 页脚主体内容 -->
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <!-- 四川非遗标志区 -->
+      <div>
+        <h3 class="text-xl font-bold mb-4">四川非遗</h3>
+        <p class="text-gray-400 mb-6">
+          传承千年文化，守护巴蜀记忆
+        </p>
+        <div class="flex space-x-4">
+          <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+            <i class="fa fa-wechat text-2xl"></i>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+            <i class="fa fa-weibo text-2xl"></i>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+            <i class="fa fa-bilibili text-2xl"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- 非遗项目导航 -->
+      <div>
+        <h4 class="text-lg font-semibold mb-4">非遗项目</h4>
+        <ul class="space-y-2">          
+          <li><a href="sichuan_SichuanOpera.html" class="text-gray-400 hover:text-white transition duration-300">川剧绝技</a></li>
+          <li><a href="sichuan_ShuEmbroidery.html" class="text-gray-400 hover:text-white transition duration-300">蜀绣工艺</a></li>
+          <li><a href="sichuan_YiFireFestival.html" class="text-gray-400 hover:text-white transition duration-300">彝族火把节</a></li>
+          <li><a href="sichuan_EmeiKungfu.html" class="text-gray-400 hover:text-white transition duration-300">峨眉武术</a></li>
+        </ul>
+      </div>
+
+      <!-- 文化资源 -->
+      <div>
+        <h4 class="text-lg font-semibold mb-4">文化资源</h4>
+        <ul class="space-y-2">
+          <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">传承人故事</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">线上展览</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">非遗课堂</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">文化地图</a></li>
+        </ul>
+      </div>
+
+      <!-- 联系我们 -->
+      <div>
+        <h4 class="text-lg font-semibold mb-4">联系我们</h4>
+        <p class="text-gray-400 mb-4">
+          四川省非物质文化遗产保护中心<br>
+          地址：成都市青羊区骡马市街18号<br>
+          电话：+86-51-12345678
+        </p>
+        <a href="mailto:heritage@sichuan.gov.cn" class="text-primary hover:text-white transition duration-300">
+          heritage@sichuan.gov.cn
+        </a>
+      </div>
+    </div>
+
+    <!-- 版权信息 -->
+    <div class="mt-12 pt-6 border-t border-gray-800 text-sm text-gray-500">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div>
+          © 2025 四川省非物质文化遗产保护中心<br>
+          备案号：川ICP备2023001234号
+        </div>
+        <div class="flex space-x-4">
+          <a href="#" class="text-gray-400 hover:text-white transition duration-300">隐私政策</a>
+          <a href="#" class="text-gray-400 hover:text-white transition duration-300">使用条款</a>
+          <a href="#" class="text-gray-400 hover:text-white transition duration-300">非遗申报</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- 样式依赖 -->
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <style>
+    .bg-gray-900 { background-color: #333333; }
+    .border-gray-800 { border-color: #444444; }
+  </style>
+</footer>
+</body>
+
+</html>
