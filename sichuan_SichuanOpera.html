@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>川剧绝技</title>
+  <!-- 引入 Font Awesome 6 CSS 文件 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+	<!--链接css文件-->
+	<link rel="stylesheet" href="css/sichuan/header.css" type="text/css">
+	<link rel="stylesheet" href="css/sichuan/SO.css" type="text/css">
+	<!--链接js文件-->
+  <script type="text/javascript" src="js/sichuan/SO.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind 配置 -->
+      <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                primary: '#C62828', // 川剧红色主色调
+                secondary: '#D84315', // 辅助色
+                gold: '#D4AF37', // 金色元素
+                dark: '#3E2723', // 深色背景
+              },
+              fontFamily: {
+                sans: ['Inter', 'system-ui', 'sans-serif'],
+                serif: ['Noto Serif SC', 'serif'],
+              },
+            },
+          }
+        }
+      </script>
+
+</head>
+
+<body>
+  <!-- 导航栏 -->
+  <header class="navbar">
+    <div class="navbar-container">
+      <div class="navbar-logo">
+        <span>川剧绝技</span>
+      </div>
+
+      <nav class="navbar-menu">
+        <div class="navbar-links">
+          <a href="list_sichuan_index.html" class="navbar-link">回到首页</a>
+          <a href="#overview" class="navbar-link">川剧概览</a>
+          
+          <!-- 下拉菜单 -->
+          <div class="dropdown">
+            <a class="navbar-link">艺术特色</a>
+            <div class="dropdown-content">
+              <a href="#skills">变脸</a>
+              <a href="#skills">喷火</a>
+              <a href="#skills">水袖功</a>
+              <a href="#skills">藏刀</a>
+              <a href="#skills">踢慧眼</a>
+              <a href="#skills">翎子功</a>
+            </div>
+          </div>
+          
+          <a href="#history" class="navbar-link">历史渊源</a>
+          <a href="#heritage" class="navbar-link">传承与保护</a>
+          <a href="#yuyue" class="navbar-link">预约观看</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 主内容区 -->
+    <!-- 封皮 -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <img src="images/sichuan/SO/cover.jpg" alt="川剧表演" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-b from-dark/10 via-dark/20 to-dark/40"></div>
+      </div>
+      
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <h1 class="text-[clamp(2.5rem,8vw,5rem)] font-serif font-bold text-white text-shadow mb-6 leading-tight">
+          川剧绝技<br>
+          <span class="text-gold">中国戏曲艺术瑰宝</span>
+        </h1>
+        <p class="text-[clamp(1rem,3vw,1.5rem)] text-white text-shadow max-w-3xl mx-auto mb-10">
+          探索四川独特的非物质文化遗产，感受川剧变脸、喷火等绝技的魅力
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a href="#skills" class="bg-primary hover:bg-primary/90 text-white font-bold py-3 px-8 rounded-md transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+            探索绝技
+          </a>
+          <a href="#video" class="bg-transparent border-2 border-white hover:border-gold hover:text-gold text-white font-bold py-3 px-8 rounded-md transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+            <i class="fa fa-play-circle mr-2"></i> 观看表演
+          </a>
+        </div>
+      </div>
+      
+      <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <a href="#overview" class="text-white hover:text-gold transition-colors duration-200">
+          <i class="fa fa-chevron-down text-2xl"></i>
+        </a>
+      </div>
+    </section>
+  
+    <!-- 概览部分 -->
+    <section id="overview" class="py-20 bg-white">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-[clamp(1.8rem,5vw,3rem)] font-serif font-bold text-dark mb-4">川剧概览</h2>
+          <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+          <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            川剧是中国汉族戏曲剧种之一，流行于四川东中部、重庆及贵州、云南部分地区。
+            川剧有着鲜明的地方特色，尤其是变脸、喷火、水袖等表演绝技闻名于世。
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-gray-50 rounded-xl shadow-md p-6 hover-scale">
+            <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+              <i class="fa fa-history text-primary text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-center mb-4">400余年历史</h3>
+            <p class="text-gray-600 text-center">
+              川剧起源于清代，融合了昆曲、高腔、胡琴、弹戏和灯戏五种声腔艺术，是中国戏曲宝库中的一颗璀璨明珠。
+            </p>
+          </div>
+          
+          <div class="bg-gray-50 rounded-xl shadow-md p-6 hover-scale">
+            <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+              <i class="fa fa-magic text-primary text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-center mb-4">独特表演绝技</h3>
+            <p class="text-gray-600 text-center">
+              川剧以其独特的表演形式闻名，尤其是变脸、喷火、藏刀等绝技，展现了中国传统戏曲艺术的神奇魅力。
+            </p>
+          </div>
+          
+          <div class="bg-gray-50 rounded-xl shadow-md p-6 hover-scale">
+            <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+              <i class="fa fa-certificate text-primary text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-center mb-4">世界文化遗产</h3>
+            <p class="text-gray-600 text-center">
+              2006年，川剧被列入第一批国家级非物质文化遗产名录，成为中国文化的重要代表之一。
+            </p>
+          </div>
+        </div>
+        
+        <div class="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+          <div>
+            <h3 class="text-2xl font-serif font-bold text-dark mb-6">艺术特色</h3>
+            <p class="text-gray-600 mb-4">
+              川剧的表演艺术有深厚的生活基础，并形成了一套完美的表演程式。表演真实细腻，幽默风趣，生活气息浓郁，为群众喜爱。
+            </p>
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <i class="fa fa-circle text-primary text-xs mt-1.5 mr-3"></i>
+                <span>表演程式严格规范，讲究"四功五法"，即唱、做、念、打和手、眼、身、法、步</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fa fa-circle text-primary text-xs mt-1.5 mr-3"></i>
+                <span>音乐曲牌丰富，有"昆、高、胡、弹、灯"五种声腔，各有特色</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fa fa-circle text-primary text-xs mt-1.5 mr-3"></i>
+                <span>舞台美术以简洁明快著称，注重写意和象征</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fa fa-circle text-primary text-xs mt-1.5 mr-3"></i>
+                <span>角色行当分为生、旦、净、末、丑，每个行当都有独特的表演风格</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="relative">
+            <img src="images/sichuan/SO/overview.jpg" alt="川剧表演" class="w-full h-auto rounded-xl shadow-lg">
+            <div class="absolute -bottom-5 -left-5 bg-primary text-white p-4 rounded-lg shadow-lg">
+              <p class="font-bold">国家级非物质文化遗产</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <!-- 绝技展示 -->
+    <section id="skills" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-[clamp(1.8rem,5vw,3rem)] font-serif font-bold text-dark mb-4">绝技展示</h2>
+          <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+          <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            川剧以其独特的表演绝技闻名于世，其中变脸、喷火、水袖功等更是被誉为"中国戏曲一绝"。
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- 变脸 -->
+          <div class="bg-white rounded-xl shadow-md overflow-hidden hover-scale">
+            <div class="relative h-64">
+              <img src="images/sichuan/SO/skill1.jpg" alt="川剧变脸表演" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent"></div>
+              <div class="absolute bottom-4 left-4 text-white">
+                <span class="bg-primary/90 text-white text-xs font-bold px-3 py-1 rounded-full">最具代表性</span>
+                <h3 class="text-xl font-bold mt-2">变脸</h3>
+              </div>
+            </div>
+            <div class="p-6">
+              <p class="text-gray-600 mb-4">
+                变脸是川剧表演艺术的特殊技巧之一，用于揭示剧中人物的内心及思想感情的变化。
+                演员在一瞬间可以变换多张脸谱，技艺精湛者甚至可以在10秒内变换14张脸。
+              </p>
+              <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                  <i class="fa fa-clock-o text-gray-400 mr-2"></i>
+                  <span class="text-sm text-gray-500">起源于清代</span>
+                </div>
+                <button class="text-primary hover:text-primary/80 font-medium flex items-center">
+                  了解更多 <i class="fa fa-arrow-right ml-1"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 喷火 -->
+          <div class="bg-white rounded-xl shadow-md overflow-hidden hover-scale">
+            <div class="relative h-64">
+              <img src="images/sichuan/SO/skill2.jpg" alt="川剧喷火表演" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent"></div>
+              <div class="absolute bottom-4 left-4 text-white">
+                <span class="bg-secondary/90 text-white text-xs font-bold px-3 py-1 rounded-full">惊险刺激</span>
+                <h3 class="text-xl font-bold mt-2">喷火</h3>
+              </div>
+            </div>
+            <div class="p-6">
+              <p class="text-gray-600 mb-4">
+                喷火是川剧表演中的一项绝技，演员通过口中喷出火焰，营造出壮观的舞台效果。
+                这一技艺需要演员经过长期训练，掌握特殊的呼吸和喷火技巧。
+              </p>
+              <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                  <i class="fa fa-clock-o text-gray-400 mr-2"></i>
+                  <span class="text-sm text-gray-500">起源于民间祭祀</span>
+                </div>
+                <button class="text-primary hover:text-primary/80 font-medium flex items-center">
+                  了解更多 <i class="fa fa-arrow-right ml-1"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 水袖功 -->
+          <div class="bg-white rounded-xl shadow-md overflow-hidden hover-scale">
+            <div class="relative h-64">
+              <img src="images/sichuan/SO/skill3.jpg" alt="川剧水袖功表演" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent"></div>
+              <div class="absolute bottom-4 left-4 text-white">
+                <span class="bg-gold/90 text-dark text-xs font-bold px-3 py-1 rounded-full">优雅灵动</span>
+                <h3 class="text-xl font-bold mt-2">水袖功</h3>
+              </div>
+            </div>
+            <div class="p-6">
+              <p class="text-gray-600 mb-4">
+                水袖功是川剧旦角的基本功之一，通过舞动长长的水袖来表达情感和塑造人物形象。
+                水袖的动作有抛、甩、抖、收等多种变化，姿态优美，富有节奏感。
+              </p>
+              <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                  <i class="fa fa-clock-o text-gray-400 mr-2"></i>
+                  <span class="text-sm text-gray-500">源自古代服饰</span>
+                </div>
+                <button class="text-primary hover:text-primary/80 font-medium flex items-center">
+                  了解更多 <i class="fa fa-arrow-right ml-1"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 藏刀 -->
+          <div class="bg-white rounded-xl shadow-md overflow-hidden hover-scale">
+            <div class="relative h-64">
+              <img src="images/sichuan/SO/skill4.jpg" alt="川剧藏刀表演" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent"></div>
+              <div class="absolute bottom-4 left-4 text-white">
+                <span class="bg-dark/90 text-white text-xs font-bold px-3 py-1 rounded-full">神秘莫测</span>
+                <h3 class="text-xl font-bold mt-2">藏刀</h3>
+              </div>
+            </div>
+            <div class="p-6">
+              <p class="text-gray-600 mb-4">
+                藏刀是川剧武生的特技之一，演员通过巧妙的手法将刀具藏在身上，然后在瞬间亮出，
+                给观众带来意想不到的惊喜。这一技艺需要极高的技巧和控制力。
+              </p>
+              <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                  <i class="fa fa-clock-o text-gray-400 mr-2"></i>
+                  <span class="text-sm text-gray-500">源自武术技巧</span>
+                </div>
+                <button class="text-primary hover:text-primary/80 font-medium flex items-center">
+                  了解更多 <i class="fa fa-arrow-right ml-1"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 踢慧眼 -->
+          <div class="bg-white rounded-xl shadow-md overflow-hidden hover-scale">
+            <div class="relative h-64">
+              <img src="images/sichuan/SO/skill5.jpg" alt="川剧踢慧眼表演" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent"></div>
+              <div class="absolute bottom-4 left-4 text-white">
+                <span class="bg-primary/90 text-white text-xs font-bold px-3 py-1 rounded-full">技巧高超</span>
+                <h3 class="text-xl font-bold mt-2">踢慧眼</h3>
+              </div>
+            </div>
+            <div class="p-6">
+              <p class="text-gray-600 mb-4">
+                踢慧眼是川剧丑角的一项特技，演员通过脚的灵活运用，将特制的"慧眼"准确地踢到额头上，
+                形成独特的舞台效果。这需要长期的练习和精准的控制力。
+              </p>
+              <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                  <i class="fa fa-clock-o text-gray-400 mr-2"></i>
+                  <span class="text-sm text-gray-500">源自传统杂技</span>
+                </div>
+                <button class="text-primary hover:text-primary/80 font-medium flex items-center">
+                  了解更多 <i class="fa fa-arrow-right ml-1"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 翎子功 -->
+          <div class="bg-white rounded-xl shadow-md overflow-hidden hover-scale">
+            <div class="relative h-64">
+              <img src="images/sichuan/SO/skill6.jpg" alt="川剧翎子功表演" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent"></div>
+              <div class="absolute bottom-4 left-4 text-white">
+                <span class="bg-secondary/90 text-white text-xs font-bold px-3 py-1 rounded-full">细腻传神</span>
+                <h3 class="text-xl font-bold mt-2">翎子功</h3>
+              </div>
+            </div>
+            <div class="p-6">
+              <p class="text-gray-600 mb-4">
+                翎子功是川剧小生的重要表演技巧，演员通过头上佩戴的两根长长的雉鸡翎子，
+                做出各种优美的动作，表达角色的情感和心理变化，如喜悦、愤怒、焦急等。
+              </p>
+              <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                  <i class="fa fa-clock-o text-gray-400 mr-2"></i>
+                  <span class="text-sm text-gray-500">源自古代服饰</span>
+                </div>
+                <button class="text-primary hover:text-primary/80 font-medium flex items-center">
+                  了解更多 <i class="fa fa-arrow-right ml-1"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <!-- 历史部分 -->
+    <section id="history" class="py-20 bg-white">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-[clamp(1.8rem,5vw,3rem)] font-serif font-bold text-dark mb-4">川剧历史</h2>
+          <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+          <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            川剧有着悠久的历史，从清代初期至今，已经经历了数百年的发展演变
+          </p>
+        </div>
+        
+        <div class="relative">
+          <!-- 时间线 -->
+          <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-primary/20"></div>
+          
+          <!-- 时间点1 -->
+          <div class="relative z-10 mb-16">
+            <div class="flex flex-col md:flex-row items-center">
+              <div class="md:w-1/2 md:pr-12 md:text-right mb-8 md:mb-0">
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md hover-scale">
+                  <h3 class="text-xl font-bold text-primary mb-3">起源（清代初期）</h3>
+                  <p class="text-gray-600">
+                    川剧起源于清代初期，是由外来的昆腔、高腔、胡琴腔、弹戏和四川民间灯戏五种声腔艺术，
+                    逐步融合形成的具有四川地方特色的传统戏曲剧种。
+                  </p>
+                </div>
+              </div>
+              <div class="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-primary border-4 border-white shadow-md z-20"></div>
+              <div class="md:w-1/2 md:pl-12"></div>
+            </div>
+          </div>
+          
+          <!-- 时间点2 -->
+          <div class="relative z-10 mb-16">
+            <div class="flex flex-col md:flex-row items-center">
+              <div class="md:w-1/2 md:pr-12"></div>
+              <div class="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-primary border-4 border-white shadow-md z-20"></div>
+              <div class="md:w-1/2 md:pl-12 mb-8 md:mb-0">
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md hover-scale">
+                  <h3 class="text-xl font-bold text-primary mb-3">形成（清代中后期）</h3>
+                  <p class="text-gray-600">
+                    清代中后期，五种声腔艺术逐渐融合，并吸收了四川方言、民间音乐、舞蹈等元素，
+                    形成了具有独特风格的川剧。这一时期，川剧的表演形式和艺术特色基本定型。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 时间点3 -->
+          <div class="relative z-10 mb-16">
+            <div class="flex flex-col md:flex-row items-center">
+              <div class="md:w-1/2 md:pr-12 md:text-right mb-8 md:mb-0">
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md hover-scale">
+                  <h3 class="text-xl font-bold text-primary mb-3">兴盛（民国时期）</h3>
+                  <p class="text-gray-600">
+                    民国时期，川剧得到了进一步的发展和繁荣，出现了许多著名的川剧表演艺术家和班社。
+                    这一时期，川剧的表演技巧和艺术水平达到了一个新的高度，变脸、喷火等绝技也在这个时期逐渐成熟。
+                  </p>
+                </div>
+              </div>
+              <div class="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-primary border-4 border-white shadow-md z-20"></div>
+              <div class="md:w-1/2 md:pl-12"></div>
+            </div>
+          </div>
+          
+          <!-- 时间点4 -->
+          <div class="relative z-10 mb-16">
+            <div class="flex flex-col md:flex-row items-center">
+              <div class="md:w-1/2 md:pr-12"></div>
+              <div class="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-primary border-4 border-white shadow-md z-20"></div>
+              <div class="md:w-1/2 md:pl-12 mb-8 md:mb-0">
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md hover-scale">
+                  <h3 class="text-xl font-bold text-primary mb-3">传承与创新（现代）</h3>
+                  <p class="text-gray-600">
+                    新中国成立后，川剧得到了政府的重视和支持，成立了专门的戏曲研究机构和表演团体。
+                    近年来，川剧在保持传统特色的同时，也进行了一系列的创新和改革，吸引了更多年轻观众的关注。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 时间点5 -->
+          <div class="relative z-10">
+            <div class="flex flex-col md:flex-row items-center">
+              <div class="md:w-1/2 md:pr-12 md:text-right mb-8 md:mb-0">
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md hover-scale">
+                  <h3 class="text-xl font-bold text-primary mb-3">世界文化遗产（2006年至今）</h3>
+                  <p class="text-gray-600">
+                    2006年，川剧被列入第一批国家级非物质文化遗产名录。如今，川剧不仅在国内广受欢迎，
+                    还走出国门，在国际上展示了中国传统戏曲艺术的独特魅力。
+                  </p>
+                </div>
+              </div>
+              <div class="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-primary border-4 border-white shadow-md z-20"></div>
+              <div class="md:w-1/2 md:pl-12"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <!-- 传承与保护 -->
+    <section id="heritage" class="py-20 bg-white">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-[clamp(1.8rem,5vw,3rem)] font-serif font-bold text-dark mb-4">传承与保护</h2>
+          <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+          <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            川剧作为国家级非物质文化遗产，正受到多方的关注和保护
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h3 class="text-2xl font-serif font-bold text-dark mb-6">传承人的努力</h3>
+            <p class="text-gray-600 mb-4">
+              为了保护和传承川剧艺术，许多老一辈艺术家和新一代传承人都在不懈努力。他们通过收徒授艺、
+              举办讲座、参与演出等方式，将川剧艺术传授给更多的人。
+            </p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8">
+              <div class="bg-gray-50 rounded-lg p-6 shadow-md hover-scale">
+                <img src="images/sichuan/SO/master1.webp" alt="任庭芳" class="w-16 h-16 rounded-full object-cover mb-4">
+                <h4 class="font-bold text-lg mb-1">任庭芳</h4>
+                <p class="text-gray-500 text-sm mb-2">国家级非遗传承人</p>
+                <p class="text-gray-600 text-sm">
+                  从事川剧表演艺术50余年，98年荣获四川省十佳演员，为川剧的振兴和发展作出了重大贡献。
+                </p>
+              </div>
+              
+              <div class="bg-gray-50 rounded-lg p-6 shadow-md hover-scale">
+                <img src="images/sichuan/SO/master2.jpg" alt="陈智林" class="w-16 h-16 rounded-full object-cover mb-4">
+                <h4 class="font-bold text-lg mb-1">陈智林</h4>
+                <p class="text-gray-500 text-sm mb-2">国家级非遗传承人</p>
+                <p class="text-gray-600 text-sm">
+                  从事川剧表演50余年，尤其擅长变脸艺术，培养了数十名优秀弟子。
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <div>
+            <div class="bg-gray-50 rounded-xl shadow-lg p-8">
+              <h3 class="text-2xl font-serif font-bold text-dark mb-6">保护措施</h3>
+              
+              <div class="space-y-6">
+                <div class="flex items-start">
+                  <div class="bg-primary/10 rounded-full p-3 mr-4">
+                    <i class="fa fa-book text-primary text-xl"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-lg mb-2">记录与整理</h4>
+                    <p class="text-gray-600">
+                      对川剧的剧本、音乐、表演技巧等进行系统的记录和整理，建立数字化档案，确保这些珍贵资料不会失传。
+                    </p>
+                  </div>
+                </div>
+                
+                <div class="flex items-start">
+                  <div class="bg-primary/10 rounded-full p-3 mr-4">
+                    <i class="fa fa-graduation-cap text-primary text-xl"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-lg mb-2">教育与推广</h4>
+                    <p class="text-gray-600">
+                      在学校开展川剧教育课程，举办川剧进校园活动，培养青少年对川剧的兴趣。同时，通过媒体宣传、
+                      国际文化交流等方式，扩大川剧的影响力。
+                    </p>
+                  </div>
+                </div>
+                
+                <div class="flex items-start">
+                  <div class="bg-primary/10 rounded-full p-3 mr-4">
+                    <i class="fa fa-building text-primary text-xl"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-lg mb-2">机构与政策支持</h4>
+                    <p class="text-gray-600">
+                      政府设立专门的川剧保护机构，提供资金支持和政策保障。同时，鼓励社会力量参与川剧保护，
+                      建立多元化的保护机制。
+                    </p>
+                  </div>
+                </div>
+                
+                <div class="flex items-start">
+                  <div class="bg-primary/10 rounded-full p-3 mr-4">
+                    <i class="fa fa-lightbulb text-primary text-xl"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-lg mb-2">创新与发展</h4>
+                    <p class="text-gray-600">
+                      在保持川剧传统特色的基础上，进行创新和发展，推出符合现代观众审美需求的新剧目，吸引更多年轻观众。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mt-20 bg-primary/5 rounded-2xl p-8 md:p-12">
+          <div class="flex flex-col md:flex-row items-center justify-between">
+            <div class="mb-8 md:mb-0 md:mr-8">
+              <h3 class="text-2xl font-bold text-dark mb-3">加入我们，一起传承川剧文化</h3>
+              <p class="text-gray-600 max-w-2xl">
+                无论你是川剧爱好者、学习者，还是想为川剧保护贡献一份力量的人，都欢迎加入我们的行列。
+                让我们一起努力，将这一中华民族的文化瑰宝传承下去，发扬光大。
+              </p>
+            </div>
+            
+            <div class="w-full md:w-auto">
+              <button class="bg-primary hover:bg-primary/90 text-white font-bold py-3 px-8 rounded-md transition-all duration-300 hover:shadow-lg">
+                <i class="fa fa-user-plus mr-2"></i> 立即报名
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <!-- 预约观看 -->
+    <section id="yuyue" class="py-20 bg-dark text-white"
+    style="background-image: url('images/sichuan/SO/yuyue.webp'); background-size: cover; background-position: center;">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-[clamp(1.8rem,5vw,3rem)] font-serif font-bold mb-4">预约观看川剧表演</h2>
+            <div class="w-20 h-1 bg-gold mx-auto mb-6"></div>
+            <p class="text-lg text-gray-300 max-w-2xl mx-auto">
+              填写您的信息，预约观看精彩的川剧表演，亲身感受这一非物质文化遗产的魅力
+            </p>
+          </div>
+          
+          <div class="bg-gray-900 rounded-xl shadow-2xl p-8" style="background-color:rgba(17, 24, 39, 0.75);">
+            <form>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <label for="name" class="block text-sm font-medium text-gray-300 mb-2">姓名</label>
+                  <input style="background-color:rgba(17, 24, 39, 0.85);" type="text" id="name" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-white" placeholder="请输入您的姓名">
+                </div>
+                
+                <div>
+                  <label for="phone" class="block text-sm font-medium text-gray-300 mb-2">手机号码</label>
+                  <input style="background-color:rgba(17, 24, 39, 0.85);" type="tel" id="phone" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-white" placeholder="请输入您的手机号码">
+                </div>
+                
+                <div>
+                  <label for="email" class="block text-sm font-medium text-gray-300 mb-2">电子邮箱</label>
+                  <input style="background-color:rgba(17, 24, 39, 0.85);" type="email" id="email" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-white" placeholder="请输入您的电子邮箱">
+                </div>
+                
+                <div>
+                  <label for="guests" class="block text-sm font-medium text-gray-300 mb-2">人数</label>
+                  <input style="background-color:rgba(17, 24, 39, 0.85);" type="number" id="guests" min="1" max="20" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-white" placeholder="请输入预约人数">
+                </div>
+              </div>
+              
+              <div class="mb-6">
+                <label for="date" class="block text-sm font-medium text-gray-300 mb-2">预约日期</label>
+                <input style="background-color:rgba(17, 24, 39, 0.85);" type="date" id="date" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-white">
+              </div>
+              
+              <div class="mb-6">
+                <label for="performance" class="block text-sm font-medium text-gray-300 mb-2">选择表演</label>
+                <select style="background-color:rgba(17, 24, 39, 0.85);" id="performance" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-white">
+                  <option value="">请选择表演类型</option>
+                  <option value="变脸专场">变脸专场</option>
+                  <option value="经典剧目">经典剧目</option>
+                  <option value="绝技表演">绝技表演</option>
+                  <option value="综合演出">综合演出</option>
+                </select>
+              </div>
+              
+              <div class="mb-8">
+                <label for="message" class="block text-sm font-medium text-gray-300 mb-2">特殊要求</label>
+                <textarea style="background-color:rgba(17, 24, 39, 0.85);" id="message" rows="4" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-white" placeholder="如有特殊要求，请在此说明"></textarea>
+              </div>
+              
+              <div class="flex justify-center">
+                <button style="background-color:rgba(176, 5, 76, 0.85);" type="submit" class="bg-primary hover:bg-primary/80 text-white font-bold py-3 px-8 rounded-md transition-all duration-300 hover:shadow-lg">
+                  <i class="fa fa-check-circle mr-2"></i> 提交预约
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+<!--页脚-->	
+<footer class="bg-gray-900 text-white">
+  <div class="container mx-auto px-4 py-12">
+    <!-- 页脚主体内容 -->
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <!-- 四川非遗标志区 -->
+      <div>
+        <h3 class="text-xl font-bold mb-4">四川非遗</h3>
+        <p class="text-gray-400 mb-6">
+          传承千年文化，守护巴蜀记忆
+        </p>
+        <div class="flex space-x-4">
+          <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+            <i class="fa fa-wechat text-2xl"></i>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+            <i class="fa fa-weibo text-2xl"></i>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+            <i class="fa fa-bilibili text-2xl"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- 非遗项目导航 -->
+      <div>
+        <h4 class="text-lg font-semibold mb-4">非遗项目</h4>
+        <ul class="space-y-2">          
+          <li><a href="sichuan_SichuanOpera.html" class="text-gray-400 hover:text-white transition duration-300">川剧绝技</a></li>
+          <li><a href="sichuan_ShuEmbroidery.html" class="text-gray-400 hover:text-white transition duration-300">蜀绣工艺</a></li>
+          <li><a href="sichuan_YiFireFestival.html" class="text-gray-400 hover:text-white transition duration-300">彝族火把节</a></li>
+          <li><a href="sichuan_EmeiKungfu.html" class="text-gray-400 hover:text-white transition duration-300">峨眉武术</a></li>
+        </ul>
+      </div>
+
+      <!-- 文化资源 -->
+      <div>
+        <h4 class="text-lg font-semibold mb-4">文化资源</h4>
+        <ul class="space-y-2">
+          <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">传承人故事</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">线上展览</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">非遗课堂</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">文化地图</a></li>
+        </ul>
+      </div>
+
+      <!-- 联系我们 -->
+      <div>
+        <h4 class="text-lg font-semibold mb-4">联系我们</h4>
+        <p class="text-gray-400 mb-4">
+          四川省非物质文化遗产保护中心<br>
+          地址：成都市青羊区骡马市街18号<br>
+          电话：+86-51-12345678
+        </p>
+        <a href="mailto:heritage@sichuan.gov.cn" class="text-primary hover:text-white transition duration-300">
+          heritage@sichuan.gov.cn
+        </a>
+      </div>
+    </div>
+
+    <!-- 版权信息 -->
+    <div class="mt-12 pt-6 border-t border-gray-800 text-sm text-gray-500">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div>
+          © 2025 四川省非物质文化遗产保护中心<br>
+          备案号：川ICP备2023001234号
+        </div>
+        <div class="flex space-x-4">
+          <a href="#" class="text-gray-400 hover:text-white transition duration-300">隐私政策</a>
+          <a href="#" class="text-gray-400 hover:text-white transition duration-300">使用条款</a>
+          <a href="#" class="text-gray-400 hover:text-white transition duration-300">非遗申报</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 样式依赖 -->
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <style>
+    .bg-gray-900 { background-color: #333333; }
+    .border-gray-800 { border-color: #444444; }
+  </style>
+</footer>
+</body>
+
+</html>
