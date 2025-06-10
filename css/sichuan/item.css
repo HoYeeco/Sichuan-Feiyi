@@ -1,0 +1,218 @@
+@charset "utf-8";
+
+.ite{
+	position: absolute;
+	left:0px;
+	right: 0px;
+}
+
+
+/*第一个图片背景*/
+ .item:nth-child(1){
+     width: 100%;
+     height: 95vh;
+     background-attachment: fixed;
+     background-image:url("../../images/sichuan/SO/haibao.jpg");
+     background-position: center center;
+     background-size: cover;、
+}
+
+/*第二个图片背景*/
+ .item:nth-child(2){
+	 width: 100%;
+     height: 95vh;
+     background-attachment: fixed;
+     background-image: url("../../images/sichuan/SE/haibao.jpg");
+     background-position: center center;
+     background-size: cover;
+}
+
+/*第三个图片背景*/
+.item:nth-child(3){
+     width: 100%;
+     height: 95vh;
+     background-attachment: fixed;
+     background-image: url("../../images/sichuan/YFF/haibao.jpg");
+     background-position: center center;
+     background-size: cover;
+}
+
+/*第四个图片背景*/
+.item:nth-child(4){
+     width: 100%;
+     height: 95vh;
+     background-attachment: fixed;
+     background-image:url("../../images/sichuan/EK/haibao.jpg");
+     background-position: center center;
+     background-size: cover;
+}
+
+/*设置文字显示框*/
+.box{
+	/*设置背景效果*/
+	background-color: rgba(255, 255, 255, 0.503);
+	/*设置宽度高*/
+    height: 500px;
+	width: 55%;
+    padding: 85px;
+	/*设置边框*/
+    border: 1px solid rgba(0, 0, 0, 0.256);
+    /*设置边框弧度*/
+	border-radius: 15px;
+    box-shadow: 0px 0px 10px #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align:justify;
+    margin: 0 auto;
+    position: relative;
+    top: 70px;
+    letter-spacing: 1px;
+    animation-name: move2;
+	/*设置过渡延迟1.2s*/
+    animation-duration: 1.2s;  
+}
+
+/*设置文字格式及方位*/
+.box span1{
+	font-size: 45px;
+    text-align: center;
+    position: absolute;
+    top:6%;
+	left:320px;   
+}
+
+.box span2{
+	font-size: 45px;
+    text-align: center;
+    position: absolute;
+    top:6%;
+	left:320px;
+}
+
+.box span3{
+	font-size: 45px;
+    text-align: center;
+    position: absolute;
+    top:6%;
+	left:300px;
+}
+
+.box span4{
+	font-size: 45px;
+    text-align: center;
+    position: absolute;
+    top:6%;
+	left:320px;
+}
+
+/*设置文字框内文字的格式及方位*/
+.box .wzxm{
+	padding-top: 10%;
+	margin-top: 25px;
+	font-size: large;
+    letter-spacing: 2px;
+    font-weight:400 ;
+}
+
+/*设置图片格式*/
+.tpxm img{
+	opacity: 1;
+    width: 250px;
+    object-fit: contain;
+}
+
+/*设置文字框内按钮的格式*/
+.box .btn{
+	display: block;
+    width: 180px;
+    background-color: rgba(255, 255, 255, 0.662);
+    padding: 5px;
+    text-align: center;
+    border-radius: 12px;
+    position: relative;
+    top: 0px;
+    left: 36%;
+    font-size: larger;
+    box-shadow: 0px 0px 5px rgb(207, 203, 202);
+	/*为边框添加阴影*/
+    cursor: pointer;
+    transition: all 0.5s;
+    animation-name:  move1;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+ }
+
+/*设置第一种过渡效果：透明度从0到1,从右向左再向右*/
+@keyframes move1{
+	0%{
+		opacity: 0;
+        transform: translateX(100%);
+	}
+    80%{
+		opacity: 0.9;
+		transform: translateX(-25%);
+	}
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/*设置第一种过渡效果：透明度从0到1,从左向右再向左*/
+@keyframes move2{
+    0%{
+       	opacity: 0;
+        transform: translateX(-30%);
+    }
+    90%{
+        opacity: 0.9;
+        transform: translateX(5%);
+    }
+	100%{
+        opacity: 1;
+        transform: translateX(0);
+    }      
+}
+
+/*设置按钮悬浮后效果*/
+.box .btn:hover{
+	background-color: rgb(255, 255, 255);
+    color: #fff;
+    box-shadow: 5px 5px 205px snow;
+	/*边框阴影*/
+    transform: translateY(-8px);
+	/*向上移动*/
+} 
+
+.box .btn:active{
+    transform: translateY(-5px);
+}
+
+/*透明度为1*/
+.box .btn:hover .yc{
+    opacity: 8;
+}
+
+.btn .yc{
+    font-size: 15px;
+    color: #fff;
+    position: relative;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 0.2s;
+}
+
+/* 设置“了解更多”链接的基本样式 */
+.more-info {
+    color: black; /* 设置文字颜色 */
+    text-decoration: none; /* 去除下划线 */
+    font-size: 22px; /* 设置字体大小 */
+    transition: all 0.3s ease; /* 添加过渡效果，使鼠标悬停时更平滑 */
+}
+
+/* 设置鼠标悬停时的样式 */
+.more-info:hover {
+    transform: scale(1.05); /* 悬停时稍微放大按钮 */
+}
